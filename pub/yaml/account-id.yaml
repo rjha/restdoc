@@ -1,0 +1,27 @@
+
+---
+version: v1.0
+rate_limited: Yes
+response_format: JSON
+authentication: None
+method: GET
+resource: account/{accountId} 
+resource_url: http://localhost:8080/sensordb/v1/account/{accountId}
+description: > 
+    API to fetch account details on a given accountId 
+parameters:
+    - name : None 
+      description: >
+
+sample_url: http://localhost:8080/sensordb/v1/account/df72fa9b-7b26-4a23-b4c0-b332195c5890
+sample_request: |
+       None 
+sample_response: |  
+            {
+              "code" : 200,
+              "response" : {
+                "accountId" : "df72fa9b-7b26-4a23-b4c0-b332195c5890",
+                "name" : "Solyaris"
+              }
+            }
+

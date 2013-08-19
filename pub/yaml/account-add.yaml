@@ -1,0 +1,56 @@
+
+---
+version: v1.0
+rate_limited: Yes
+response_format: JSON
+authentication: None
+method: POST
+resource: account/add
+resource_url: http://localhost:8080/sensordb/v1/account/add
+description: > 
+    API to provision a new account for sensorDB application.
+parameters:
+    - name : Name
+      description: >
+          Account Name is unique and should be less than 32 characters.
+          It can only contain alphanumeric characters. 
+      optional :No 
+
+sample_url: http://localhost:8080/sensordb/v1/account/add
+sample_request: |
+
+    require("common.inc");
+    $post_url = "http://localhost/sensordb/v1/account/add" ;
+
+    function create_account($name) {
+        global $post_url ;
+
+        $account = array("name" => $name);
+        $post_data = json_encode($account);
+        $cookies = array("COOKIE1" => "ABCD1234" , "COOKIE2" => "magic1234");
+        $response = get_curl_response($post_url,$post_data,$cookies,false);
+        $http_code = $response["code"];
+        $result = $response["data"];
+
+
+        if($http_code == 200 ) {
+            printf("success \n \t response => \n" );
+            print_r($result);
+            printf(" \n \n ");
+
+        } else {
+            printf("ERROR \n" );
+            print_r($result);
+            printf(" \n \n ");
+        }
+    }
+
+    create_account("Stranger in Strange Land");
+
+sample_response: |  
+
+    {
+        "code" => "200",
+        "response" => "success"
+    }
+	

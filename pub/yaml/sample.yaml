@@ -1,0 +1,38 @@
+
+---
+version: v1.0
+rate_limited: Yes
+response_format: JSON
+authentication: None
+method: GET
+resource: device/list
+resource_url: http://localhost:8080/sensordb/v1/device/list
+description: > 
+    This is a cool API
+    This is a cool API
+    This is a cool API
+    This is a cool API
+    This is a cool API
+
+parameters:
+    - name : Name
+      description: >
+          Name is something good
+      optional : yes
+    - name: age 
+      description :  >
+        Age is a number
+
+sample_url: http://localhost:8080/sensordb/v1/device/list
+sample_request: |
+       None 
+sample_response: |  
+        {
+            "code" => 200,
+            "response" => "success"
+        }
+        
+
+
+	
+
