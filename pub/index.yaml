@@ -14,3 +14,9 @@ api2 :
     description : >
         API to fetch details of an account on supplied accountId
     file_name : "yaml/account-id.yaml"
+
+api3 :
+    name : "sample"
+    description : >
+       Sample YAML file to describe a rest API
+    file_name : "yaml/sample.yaml"
