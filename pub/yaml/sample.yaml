@@ -16,12 +16,13 @@ description: >
 
 parameters:
     - name : Name
-      description: >
+      description : >
           Name is something good
       optional : yes
-    - name: age 
-      description :  >
+    - name : age 
+      description : >
         Age is a number
+      default : 22
 
 sample_url: http://localhost:8080/sensordb/v1/device/list
 sample_request: |
