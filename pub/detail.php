@@ -41,7 +41,7 @@
 <body>
 		<div class="row">
 		<div class="col-lg-offset-1 col-lg-11">
-			<nav class="navbar navbar-fixed-top" role="navigation">
+			<nav class="navbar navbar-top" role="navigation">
         	<!-- Brand and toggle get grouped for better mobile display -->
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex5-collapse">
@@ -106,11 +106,16 @@
 					<h4>Parameters</h4>
 				</div>
                 <table class="table">
+                <tr>
+                   <th>Parameter</th><th>Description</th><th>Optional</th><th>Default</th>
+                </tr>
                     <tbody>
                         <?php foreach($data["parameters"] as $param) { ?>
                         <tr>
                             <td><b><?php echo $param["name"] ?> </b></td>
                             <td><?php echo $param["description"] ; ?>  </td>
+                            <td><?php if ($param["optional"]) { echo "True" ; } ?></td>
+                            <td><?php if ($param["default"]) { echo $param["default"] ; } ?></td>
                         </tr>
                         <?php } ?>
                     </tbody>
@@ -138,19 +143,11 @@
                 <h4> Response </h4>
 				<pre> <code> <?php echo $data["sample_response"] ?> </code> </pre>
             </div>
-            <div style="padding:20px;">
-                <h3>Response codes</h3>
-                <p> 
-                    The API adheres to standard HTTP return code conventions. 
-                    E.g. we return code 400 for Bad Requests 
-                </p>
-                <dl class="dl-horizontal">
-                    <dt>200</dt>
-                    <dd>Success</dd>
-                    <dt>500</dt>
-                    <dd>Server Error</dd>
-                </dl>
+            <div>
+                <h4> Error Response </h4>
+                <pre> <code> <?php echo $data["sample_error"] ?> </code> </pre>
             </div>
+           
         </div> <!-- col-8 -->
 
         <div class="col-lg-2">
@@ -159,8 +156,8 @@
 
 				<tbody>
 					<tr>
-						<td><b>Rate Limited?</b></td>
-                        <td><?php echo $data["rate_limited"]?> </td>
+						<td><b>Rate Limited</b></td>
+                        <td><?php if ($data["rate_limited"]) { echo "True" ;} else { echo "False" ;} ?></td>
 					</tr>
 					<tr>
 						<td><b>Response Format</b></td>
