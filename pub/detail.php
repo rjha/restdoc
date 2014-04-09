@@ -115,7 +115,7 @@
                             <td><b><?php echo $param["name"] ?> </b></td>
                             <td><?php echo $param["description"] ; ?>  </td>
                             <td><?php if ($param["optional"]) { echo "True" ; } ?></td>
-                            <td><?php if ($param["default"]) { echo $param["default"] ; } ?></td>
+                            <td><?php if (!empty($param["default"])) { echo $param["default"] ; } ?></td>
                         </tr>
                         <?php } ?>
                     </tbody>
