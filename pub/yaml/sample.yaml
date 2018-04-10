@@ -13,17 +13,15 @@ description: >
     This is a cool API
     This is a cool API
     This is a cool API
-
 parameters:
     - name : Name
       description : >
           Name is something good
-      optional : yes
+      optional : Yes
     - name : age 
       description : >
         Age is a number
       default : 22
-
 sample_url: http://localhost:8080/sensordb/v1/device/list
 sample_request: |
        None 
@@ -32,8 +30,3 @@ sample_response: |
             "code" => 200,
             "response" => "success"
         }
-        
-
-
-	
-

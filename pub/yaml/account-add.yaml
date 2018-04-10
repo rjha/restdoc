@@ -14,11 +14,9 @@ parameters:
       description: >
           Account Name is unique and should be less than 32 characters.
           It can only contain alphanumeric characters. 
-      optional :No 
-
+      optional : No 
 sample_url: http://localhost:8080/sensordb/v1/account/add
 sample_request: |
-
     require("common.inc");
     $post_url = "http://localhost/sensordb/v1/account/add" ;
 
@@ -46,11 +44,9 @@ sample_request: |
     }
 
     create_account("Stranger in Strange Land");
-
 sample_response: |  
 
     {
         "code" => "200",
         "response" => "success"
     }
-	
