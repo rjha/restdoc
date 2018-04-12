@@ -4,44 +4,28 @@
 <meta charset="UTF-8">
 <title>{{ items["resource"] }}</title>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
-<style> body {padding-top : 90px; } </style>
+<style> 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.page {
+  position: relative;
+  page-break-after: always;
+  margin: 0;
+  padding: 0;
+  width: 8.5in;
+  height: 11in;
+  overflow: hidden;
+}
+</style>
 
 </head>
 
-<body>
-		<div class="row">
-		<div class="col-lg-offset-1 col-lg-11">
-			<nav class="navbar navbar-top" role="navigation">
-        	<!-- Brand and toggle get grouped for better mobile display -->
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex5-collapse">
-	            <span class="sr-only">Toggle navigation</span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button>
-              <a class="navbar-brand" href="/">Yuktix</a>
-	        </div>
-
-       
-          <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-          </ul>
-        </nav>
-		</div>
-	</div> <!-- top toolbar  -->
-	
-	<div class="row">
-		<div class="col-lg-offset-1 col-lg-8">
-			<ol class="breadcrumb">
-				<li><a href="/">Home</a></li>
-                <li><a href="/">Yuktix&nbsp;REST API</a></li>
-                <li class="active"> {{ items["resource"] }} </li>
-			</ol>
-		</div>
-		
-	</div> <!--  breadcrumbs  -->
-	
+<body>	
 	<div class="row">
 		<div class="col-lg-1">&nbsp;</div>
 		<div class="col-lg-11">

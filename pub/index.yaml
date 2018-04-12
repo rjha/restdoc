@@ -3,17 +3,7 @@
 #
 ---
 api1 :
-    name : "account/add"
+    name : "account-id"
     description : >
         API to provision a new account in system.
-    file_name : "yaml/account-add.yaml"
-api2 :
-    name : "account/{accountId}"
-    description : >
-        API to fetch details of an account on supplied accountId
     file_name : "yaml/account-id.yaml"
-api3 :
-    name : "sample"
-    description : >
-       Sample YAML file to describe a rest API
-    file_name : "yaml/sample.yaml"
