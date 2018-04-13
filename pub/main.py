@@ -22,7 +22,12 @@ if args.out_type == "PDF" or args.out_type == "BOTH" :
     filename=args.out_dir+items["name"]+".pdf"
     options = {
         'page-size': 'A4',
-        'dpi': 250
+        'dpi': 300,
+        'margin-top': '0.75in',
+        'margin-right': '0.75in',
+        'margin-bottom': '0.75in',
+        'margin-left': '0.75in',
+        'encoding': "UTF-8",
     }
     pdfkit.from_string(tmpl.render(items=items), filename, options=options)
 
