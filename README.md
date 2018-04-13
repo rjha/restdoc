@@ -19,11 +19,12 @@ read API definition from YAML files and generates HTML and PDF.
 How?
 =======
 
-Clone the repo and dump the restdoc folder inside your web server DOCUMENT ROOT. We are assuming that you know how to run Python scripts. Simply run the python script "main.py" with the command "FLASK_APP=main.py flask run".
+Clone the repo and dump the restdoc folder anywhere you like. Please make sure you have python (www.python.org) and pdfkit (https://pypi.python.org/pypi/pdfkit), wkhtmltopdf(https://pypi.python.org/pypi/wkhtmltopdf/0.1), yaml (https://pyyaml.org/wiki/PyYAMLDocumentation), jinja2 (http://jinja.pocoo.org) and argparse (https://pypi.python.org/pypi/argparse) modules installed in your system. We are assuming that you know how to run Python scripts. Simply run the python script "main.py" in /pub folder with the arguments "Yaml_File" - Source Yaml file, "out_dir" - Destination output directory and "out_type" - Type of the generated output file "PDF" for a PDF Document, "HTML" for a HTML Document and "BOTH" for both types.
 
-To add new API, open the index.yaml file and add new API summary there. The full API definition resides
-in a YAML file inside yaml folder. You can see the samples to get started. We use Twitter Bootstrap library 
-and the Look and Feel of API pages is modeled on twitter REST API.
+Example - python main.py yaml/sample1.yaml ~/Desktop/ PDF
+
+Sample API definition resides in the YAML files inside yaml folder. You can see the samples to get started. 
+We use Twitter Bootstrap library and the Look and Feel of API pages is modeled on twitter REST API.
 
 
 
