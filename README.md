@@ -26,5 +26,12 @@ Example - python main.py yaml/sample1.yaml ~/Desktop/ PDF
 Sample API definition resides in the YAML files inside yaml folder. You can see the samples to get started. 
 We use Twitter Bootstrap library and the Look and Feel of API pages is modeled on twitter REST API.
 
+Contact
+=======
+
+Mitesh Banka
++91 8482096370
+mbanka@yuktix.com
+www.yuktix.com
 
 
