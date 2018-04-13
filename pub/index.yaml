@@ -1,0 +1,21 @@
+
+---
+version: 
+name: 
+rate_limited: 
+response_format: 
+authentication: 
+method: 
+resource: 
+resource_url: 
+description: | 
+    
+parameters:
+    - name : 
+      description: |
+        
+      optional : 
+sample_url: 
+sample_request: |
+    
+sample_response: |  
