@@ -27,11 +27,11 @@ We are assuming that you know how to run a Python script. Place all your YAML fi
 
 Options -
 
--h or --help : Help and list of options.
--t or --test : Test with our sample YAML file. Parsed sample HTML and PDF file will be created in dest folder
--s or --source : Source directory of YAML files to be parsed. Default - src.
--d or --dest : Destination directory for parsed HTML and PDF files. Default - dest.
--f or --format : Format of the parsed file (PDF, HTML or BOTH). Default - BOTH.
+1. -h or --help : Help and list of options.
+2. -t or --test : Test with our sample YAML file. Parsed sample HTML and PDF file will be created in dest folder
+3. -s or --source : Source directory of YAML files to be parsed. Default - src.
+4. -d or --dest : Destination directory for parsed HTML and PDF files. Default - dest.
+5. -f or --format : Format of the parsed file (PDF, HTML or BOTH). Default - BOTH.
 
 Sample API definition resides in the YAML files inside sample folder. You can see the samples to get started. 
 We use Twitter Bootstrap library and the Look and Feel of API pages is modeled on twitter REST API.
@@ -39,8 +39,8 @@ We use Twitter Bootstrap library and the Look and Feel of API pages is modeled o
 Contact
 =======
 
-Mitesh Banka
-+91 8482096370
-mbanka@yuktix.com
-www.yuktix.com
+.Mitesh Banka
+.+91-8482096370
+.mbanka@yuktix.com
+.www.yuktix.com
 
