@@ -39,8 +39,8 @@ We use Twitter Bootstrap library and the Look and Feel of API pages is modeled o
 Contact
 =======
 
-.Mitesh Banka
-.+91-8482096370
-.mbanka@yuktix.com
-.www.yuktix.com
+Mitesh Banka
++91-8482096370
+mbanka@yuktix.com
+www.yuktix.com
 
