@@ -1,7 +1,7 @@
 
 ---
 version: v1.0
-name: account-id
+name: sample2
 rate_limited: Yes
 response_format: JSON
 authentication: None
