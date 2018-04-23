@@ -1,0 +1,34 @@
+
+---
+version: v2.0
+name: SystemServices
+rate_limited: Yes
+response_format: JSON
+consume_format: JSON
+authentication: Super Admin
+method: POST
+resource: /system/v2
+resource_url: http://api1.yuktix.com:8080/sensordb/system/v2/
+description: > 
+    Description
+apis:
+    - name : /computation/packet
+      file_name : computation-packet.html
+    - name : /beanstalk/stats
+      file_name : beanstalk-stats.html
+    - name : /beanstalk/peek
+      file_name : beanstalk-peek.html
+    - name : /beanstalk/kick
+      file_name : beanstalk-kick.html
+    - name : /beanstalk/delete
+      file_name : beanstalk-delete.html
+    - name : /cg/query
+      file_name : cg-query.html
+    - name : /cg/create
+      file_name : cg-create.html
+    - name : /cg/add
+      file_name : cg-add.html
+    - name : /cg/delete
+      file_name : cg-delete.html
+    - name : /cg/update
+      file_name : cg-update.html 

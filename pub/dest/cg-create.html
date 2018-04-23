@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>{{ items["resource"] }}</title>
+<title>/cg/create</title>
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
 <style> 
 html,
@@ -30,9 +30,9 @@ body {
 		<div class="col-lg-1">&nbsp;</div>
 		<div class="col-lg-11">
 			<div class="page-header">
-            <h1>{{ items["resource"] }}</h1>
+            <h1>/cg/create</h1>
 				<p>
-                <span class="label label-info">API version {{ items["version"] }}</span>
+                <span class="label label-info">API version v2.0</span>
 				</p>
 			</div>
 		</div>
@@ -44,13 +44,14 @@ body {
 	<div class="row">
 		<div class="col-lg-1">&nbsp;</div>
 		<div class="col-lg-8">
-            <p> {{ items["description"] }}
+            <p> API Description
+
 			<div class="panel">
 				<div class="panel-heading">
 					<h4>Resource URL</h4>
 				</div>
 				<div class="panel-body" class="para">
-                    <p>{{ items["resource_url"] }} </p>
+                    <p>http://api1.yuktix.com:8080/sensordb/system/v2/cg/create </p>
 				</div>
 
 			</div>
@@ -64,14 +65,23 @@ body {
                    <th>Parameter</th><th>Description</th><th>Optional</th><th>Default</th>
                 </tr>
                     <tbody>
-                            {% for  parameters in items["parameters"] %}
+                            
                                     <tr>
-                                        <td><b>{{ parameters["name"] }} </b></td>
-                                        <td>{{ parameters["description"] }}</td>
-                                        <td>{{ parameters["optional"] }}</td>
-                                        <td>{{ parameters["default"] }}</td>
+                                        <td><b>HTTPHeaders </b></td>
+                                        <td>HTTP Headers
+</td>
+                                        <td>False</td>
+                                        <td></td>
                                     </tr>
-                            {% endfor %}
+                            
+                                    <tr>
+                                        <td><b>Param </b></td>
+                                        <td>ComputationGroup Param
+</td>
+                                        <td>False</td>
+                                        <td></td>
+                                    </tr>
+                            
                     </tbody>
                 </table>
             </div>
@@ -82,24 +92,28 @@ body {
 			<table class="table">
 				<tbody>
 					<tr>
-                        <td>{{ items["method"] }} </td>
-                        <td>{{ items["sample_url"] }}</td>
+                        <td>POST </td>
+                        <td>http://api1.yuktix.com:8080/sensordb/system/v2/cg/create</td>
 					</tr>
 				</tbody>
 			</table>
 
             <div>
                 <h4> Request </h4>
-                <pre> <code> {{ items["sample_request"] }} </code> </pre>
+                <pre> <code> None 
+ </code> </pre>
             </div>
 
 			<div>
                 <h4> Response </h4>
-				<pre> <code> {{ items["sample_response"] }} </code> </pre>
+				<pre> <code> {
+    "code" => 200,
+    "response" => ComputationGroup.create
+} </code> </pre>
             </div>
             <div>
                 <h4> Error Response </h4>
-                <pre> <code> {{ items["sample_error"] }} </code> </pre>
+                <pre> <code>  </code> </pre>
             </div>
            
         </div> <!-- col-8 -->
@@ -111,19 +125,19 @@ body {
 				<tbody>
 					<tr>
 						<td><b>Rate Limited</b></td>
-                        <td>{{ items["rate_limited"] }}</td>
+                        <td>True</td>
 					</tr>
 					<tr>
 						<td><b>Response Format</b></td>
-                        <td>{{ items["response_format"] }} </td>
+                        <td>JSON </td>
 					</tr>
 					<tr>
 						<td><b>Consume Format</b></td>
-                        <td>{{ items["consume_format"] }} </td>
+                        <td>JSON </td>
 					</tr>
 					<tr>
 						<td><b>Authentication</b></td>
-                        <td>{{ items["authentication"] }}</td>
+                        <td>Super Admin</td>
 					</tr>
 
 				</tbody>

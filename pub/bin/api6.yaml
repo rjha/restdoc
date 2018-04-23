@@ -1,0 +1,30 @@
+
+---
+version: v2.0
+name: cg-query
+rate_limited: Yes
+response_format: JSON
+consume_format: JSON
+authentication: Super Admin
+method: POST
+resource: /cg/query
+resource_url: http://api1.yuktix.com:8080/sensordb/system/v2/cg/query
+description: > 
+    API Description
+parameters:
+    - name : HTTPHeaders
+      description : >
+          HTTP Headers
+      optional : No
+    - name : ComputationGroupQuery 
+      description : >
+          ComputationGroupQuery cgq
+      optional: No
+sample_url: http://api1.yuktix.com:8080/sensordb/system/v2/cg/query
+sample_request: |
+       None 
+sample_response: |  
+        {
+            "code" => 200,
+            "response" => ComputationGroup.get
+        }

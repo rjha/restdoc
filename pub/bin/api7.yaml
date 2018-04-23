@@ -1,0 +1,30 @@
+
+---
+version: v2.0
+name: cg-create
+rate_limited: Yes
+response_format: JSON
+consume_format: JSON
+authentication: Super Admin
+method: POST
+resource: /cg/create
+resource_url: http://api1.yuktix.com:8080/sensordb/system/v2/cg/create
+description: > 
+    API Description
+parameters:
+    - name : HTTPHeaders
+      description : >
+          HTTP Headers
+      optional : No
+    - name : Param 
+      description : >
+          ComputationGroup Param
+      optional: No
+sample_url: http://api1.yuktix.com:8080/sensordb/system/v2/cg/create
+sample_request: |
+       None 
+sample_response: |  
+        {
+            "code" => 200,
+            "response" => ComputationGroup.create
+        }

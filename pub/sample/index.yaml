@@ -1,0 +1,18 @@
+
+---
+version: v2.0
+name: Sample
+rate_limited: Yes
+response_format: JSON
+consume_format: JSON
+authentication: Super Admin
+method: POST
+resource: /sample1/v1
+resource_url: http://api1.yuktix.com:8080/sample/samle1/v1/
+description: > 
+    Description
+apis:
+    - name : /sample1/v1
+      file_name : sample1.html
+    - name : /sample2/v1
+      file_name : sample2.html

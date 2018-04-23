@@ -1,0 +1,30 @@
+
+---
+version: v2.0
+name: beanstalk-delete
+rate_limited: Yes
+response_format: JSON
+consume_format: JSON
+authentication: Super Admin
+method: POST
+resource: /beanstalk/delete
+resource_url: http://api1.yuktix.com:8080/sensordb/system/v2/beanstalk/delete
+description: > 
+    API Description
+parameters:
+    - name : HTTPHeaders
+      description : >
+          HTTP Headers
+      optional : No
+    - name : Param
+      description : >
+          MapParam
+      optional: No
+sample_url: http://api1.yuktix.com:8080/sensordb/system/v2/beanstalk/delete
+sample_request: |
+       None 
+sample_response: |  
+        {
+            "code" => 200,
+            "response" => BeanstalkAdapter.delete
+        }

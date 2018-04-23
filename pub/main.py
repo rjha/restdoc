@@ -3,6 +3,9 @@ time_start = time.clock()
 
 import argparse
 
+import shutil
+import os
+
 import glob
 
 import yaml
@@ -20,8 +23,19 @@ def yaml_parse(dest, format, source) :
 
     items = yaml.load(stream)
 
-    with open('templates/document.tmpl') as t:
-        tmpl = Template(t.read())
+    destination = "bin"
+    
+    shutil.move(source,destination)
+
+
+    print source
+
+    if source[-10:] == "index.yaml":
+        with open('templates/document1.tmpl') as t:
+            tmpl = Template(t.read())
+    else :
+        with open('templates/document.tmpl') as t:
+            tmpl = Template(t.read())
 
     if format == "PDF" or format == "BOTH" :
         filename=dest+"/"+items["name"]+".pdf"

@@ -1,0 +1,30 @@
+
+---
+version: v2.0
+name: cg-update
+rate_limited: Yes
+response_format: JSON
+consume_format: JSON
+authentication: Super Admin
+method: POST
+resource: /cg/update
+resource_url: http://api1.yuktix.com:8080/sensordb/system/v2/cg/update
+description: > 
+    API Description
+parameters:
+    - name : HTTPHeaders
+      description : >
+          HTTP Headers
+      optional : No
+    - name : Param 
+      description : >
+          ComputationGroupDevice Param
+      optional: No
+sample_url: http://api1.yuktix.com:8080/sensordb/system/v2/cg/update
+sample_request: |
+       None 
+sample_response: |  
+        {
+            "code" => 200,
+            "response" => success
+        }
