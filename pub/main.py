@@ -24,8 +24,8 @@ def yaml_parse(dest, format, source) :
     items = yaml.load(stream)
 
     destination = "bin"
-    
-    shutil.move(source,destination)
+    if source[:6] != "sample" :
+        shutil.move(source,destination)
 
 
     print source
