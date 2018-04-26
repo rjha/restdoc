@@ -47,7 +47,7 @@ body {
             <p> {{ items["description"] }}
 			<div class="panel">
 				<div class="panel-heading">
-					<h4>Resource URL</h4>
+					<h4>Endpoint</h4>
 				</div>
 				<div class="panel-body" class="para">
                     <p>{{ items["resource_url"] }} </p>
@@ -57,11 +57,11 @@ body {
             
 	        <div class="panel">
 				<div class="panel-heading">
-					<h4>Parameters</h4>
+					<h4>Headers & Parameters</h4>
 				</div>
                 <table class="table">
                 <tr>
-                   <th>Parameter</th><th>Description</th><th>Optional</th><th>Default</th>
+                   <th>Name</th><th>Description</th><th>Optional</th><th>Default</th>
                 </tr>
                     <tbody>
                             {% for  parameters in items["parameters"] %}
