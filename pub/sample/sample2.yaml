@@ -1,6 +1,7 @@
 
 ---
 version: v1.0
+name: sample2
 rate_limited: Yes
 response_format: JSON
 authentication: None
@@ -12,7 +13,6 @@ description: >
 parameters:
     - name : None 
       description: >
-
 sample_url: http://localhost:8080/sensordb/v1/account/df72fa9b-7b26-4a23-b4c0-b332195c5890
 sample_request: |
        None 
@@ -24,4 +24,3 @@ sample_response: |
                 "name" : "Solyaris"
               }
             }
-

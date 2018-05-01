@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{{ items["resource"] }}</title>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
+<style> 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.page {
+  position: relative;
+  page-break-after: always;
+  margin: 0;
+  padding: 0;
+  width: 8.5in;
+  height: 11in;
+  overflow: hidden;
+}
+</style>
+
+</head>
+
+<body>	
+	<div class="row">
+		<div class="col-lg-1">&nbsp;</div>
+		<div class="col-lg-11">
+			<div class="page-header">
+            <h1>{{ items["resource"] }}</h1>
+				<p>
+                <span class="label label-info">API version {{ items["version"] }}</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+
+	<div class="row">
+		<div class="col-lg-1">&nbsp;</div>
+		<div class="col-lg-8">
+            <p> {{ items["description"] }}
+			<div class="panel">
+				<div class="panel-heading">
+					<h4>Resource URL</h4>
+				</div>
+				<div class="panel-body" class="para">
+                    <p>{{ items["resource_url"] }} </p>
+				</div>
+
+			</div>
+            
+	        <div class="panel">
+				<div class="panel-heading">
+					<h4>End Points</h4>
+				</div>
+                <table class="table">
+                <tr>
+                   <th>Path</th><th>File</th>
+                </tr>
+                    <tbody>
+                            {% for  apis in items["apis"] %}
+                                    <tr>
+                                        <td><b>{{ apis["name"] }} </b></td>
+                                        <td><a href="{{ apis["file_name"] }}">{{ apis["file_name"] }}</a></td>
+                                    </tr>
+                            {% endfor %}
+                    </tbody>
+                </table>
+            </div>           
+        </div> <!-- col-8 -->
+
+        <div class="col-lg-2">
+			<h3>Resource Information</h3>
+			<table class="table">
+
+				<tbody>
+					<tr>
+						<td><b>Rate Limited</b></td>
+                        <td>{{ items["rate_limited"] }}</td>
+					</tr>
+					<tr>
+						<td><b>Response Format</b></td>
+                        <td>{{ items["response_format"] }} </td>
+					</tr>
+					<tr>
+						<td><b>Consume Format</b></td>
+                        <td>{{ items["consume_format"] }} </td>
+					</tr>
+					<tr>
+						<td><b>Authentication</b></td>
+                        <td>{{ items["authentication"] }}</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div> <!-- col:2 -->
+	</div>
+
+</body>
+</html>
